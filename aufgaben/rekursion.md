@@ -181,14 +181,25 @@ Probieren Sie einzelne `0.5` mit anderen Werten Zu ersetzen.
 
 Ersetzt man `y02 = mix(0.5, y0, y2)` mit `y02 = mix(0.6, y0, y2)` entsteht ein unvollkommenes Sierpinski-Dreieck,
 welches ein bisschen gekrümmt ist.
+
+
+<p align="center">
+
 ![Verändertes Sierpinski-Dreieck](sierpinski-warped.png)
 
+</p>
+<p align="center">
+Verändertes Sierpinski-Dreieck
+</p>
+
 	
+</details>
 </details>
 
 
 
 ## Schrittweise Implementierung
+
 <details><summary><b>Schritt 0: Leerer Funktionskörper</b></summary>
 
 	function drawSierpinski(x0, y0, x1, y1, x2, y2, depth=6)
