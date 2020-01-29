@@ -125,6 +125,7 @@ Schreiben Sie diese Koordinaten in Variablen, denn Sie werden diese mehrmals geb
 Sie werden jeden dieser Werte zwei mal nutzen, denn ein Dreieck berührt ein anderes Dreieck in diesem Punkt.
 
 </details>
+
 ---
 
 ## Musterlösung
