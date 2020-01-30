@@ -197,6 +197,43 @@ Verändertes Sierpinski-Dreieck
 </details>
 </details>
 
+<details><summary><b>Gesamtes Programm</b></summary>
+	
+	function drawSierpinski(x0, y0, x1, y1, x2, y2, depth=6)
+	{
+		if depth <= 0 then
+		{
+			canvas.fillArea([[x0, y0], [x1, y1], [x2, y2]]);
+		}
+		else
+		{
+			var x01	= (x0+x1)/2, y01 = (y0+y1)/2; # Mittelpunkt zwischen p0 und p1
+			var x02	= (x0+x2)/2, y02 = (y0+y2)/2; # Mittelpunkt zwischen p0 und p2
+			var x12	= (x1+x2)/2, y12 = (y1+y2)/2; # Mittelpunkt zwischen p1 und p2
+
+			drawSierpinski(x0, y0, x01, y01, x02, y02, depth-1);
+			drawSierpinski(x1, y1, x01, y01, x12, y12, depth-1);
+			drawSierpinski(x2, y2, x02, y02, x12, y12, depth-1);
+		}
+	}
+
+	var cw = canvas.width(), ch = canvas.height();
+	for var i in 0:10 do
+	{
+		canvas.setFillColor(1, 1, 1);
+		canvas.clear();
+
+		canvas.setFillColor(0, 0, 0);
+		drawSierpinski(0.5*cw, 0.2*ch, 
+					   0.1*cw, 0.8*ch,
+					   0.9*cw, 0.8*ch,
+					   depth=i);
+
+		wait(700);
+	}
+
+</details>
+
 
 
 ## Schrittweise Implementierung
