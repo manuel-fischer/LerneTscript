@@ -63,8 +63,8 @@ Füllen des kompletten Dreiecks.
 
 <details><summary><b>Tipp 2: Zeichnen eines Dreiecks</b></summary>
 
-Die Funktion `canvas.fillArea` übernimmt als einzigen Parameter ein Array mit beliebiger Länge.
-Jedes Element ist wiederum ein Array, welches 2 Elemente besitzt: eine `x` und eine `y` Koordinate.
+Die Funktion `canvas.fillArea` zeichnet ein Polygon. Die Funktion übernimmt als einzigen Parameter ein Array mit beliebiger Länge.
+Jedes Element ist wiederum ein Array, welches 2 Elemente besitzt: eine `x` und eine `y` Koordinate. Dies sind jeweils die Eckpunkte des Polygons.
 
 <details><summary><i>Lösung</i></summary>
 
