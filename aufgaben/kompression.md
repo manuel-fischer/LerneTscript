@@ -152,7 +152,7 @@ Die Funktion `Array.concat` √ºbernimmt zwei Arrays und gibt ein neues Array zur√
 	{
 		var ret = [];
 		for var e in array do
-			for var i in 0:e[0] do
+			for 0:e[0] do
 				ret.push(e[1]);
 
 		return ret;
