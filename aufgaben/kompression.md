@@ -113,7 +113,7 @@ Die Dekomprimierung ist meist einfacher als die Komprimierung, weil die Daten ni
 
 ## Tipps
 
-Es gibt verschiedene herangehensweisen, es ist möglich 
+Es gibt verschiedene herangehensweisen, es ist möglich die Elemente wiederholend mit `push` zu einem Array hinzuzufügen. Jedoch gibt es auch eine weitere Möglichkeit, die hier in den Tipps behandelt wird.
 
 <details><summary><b>Tipp 0: Array gefüllt mit einem Wert erstellen</b></summary>
 	
