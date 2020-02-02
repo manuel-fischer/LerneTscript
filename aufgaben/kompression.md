@@ -1,14 +1,14 @@
 # Kompressionsalgorithmen
 
 In dieser Aufgabe wird ein Konzept vorgestellt, welches nützlich ist um die Speicherung von Daten zu optimieren:
-Lauflängenkodierung ist eine der einfachsten verlustfreien Kompressionsalgorithmen.
+[Lauflängenkodierung](https://de.wikipedia.org/wiki/Laufl%C3%A4ngenkodierung) ist eine der einfachsten verlustfreien [Kompressionsalgorithmen](https://de.wikipedia.org/wiki/Datenkompression).
 Zu einem Kompressionsalgorithmus gehören jeweils die Komprimierung und die Dekomprimierung, welche die Komprimierung rückgängig macht.
 
 # 1. Komprimierung
 
 Schreiben Sie eine Funktion, welches ein Array einliest und ein Array *ausspuckt*, welches aus einzelnen Anzahl-Inhalt-Paaren (Array mit zwei Elementen) besteht.
 
-    function compress(array);
+    function compress(array)
 
 Der folgende Funktionsausruf
 
@@ -18,6 +18,27 @@ soll also folgendes zurückgeben
 
     [[1, 0], [3, 1], [4, 2], [2, 3]]
 
+Die Funktion soll über die einzelnen Elemente laufen und zählen, wie oft ein Element nacheinander auftritt. Oben im Beispiel wird die `0` nur einmal gezählt, also wird dafür `[1, 0]` zum großen Array hinzugefügt. Die `1` wird dreimal gezählt, somit wird `[3, 1]` hinzugefügt. Usw.
+
+---
+
+## Tipps
+<details><summary><b>Tipp 0: Zählen der Elemente</b></summary>
+	
+Überlegen Sie wie man hintereinander liegende gleiche Elemente zählt.
+
+<details><summary><i>Hinweis</i></summary>
+	
+Optional: Schreiben Sie eine Funktion, die genau diese Aufgabe erfüllt.
+Die Funktion übernimmt zwei Parameter: Das Array und die Position, ab der die wiederholenden Elemente gezählt werden sollen.
+
+</details>
+<details><summary><i>Lösung</i></summary>
+
+Schreiben Sie das erste Element in eine Variable. Vergleichen Sie nun die folgenden Elemente im Array mit diesem, bis ein anderes Element auftritt oder das Ende des Arrays erreicht worden ist. Dabei zählen Sie mit. Diese Zahl nutzen Sie später im Anzahl-Inhalt-Paar.
+
+</details>	
+</details>
 
 ---
 
@@ -86,7 +107,27 @@ soll also folgendes zurückgeben
 
 # 2. Dekomprimierung
 
-Die Dekomprimierung ist meist einfacher als die Komprimierung. Schreiben Sie nun ein Programm welches den Komprimierungsvorgang rückgängig macht.
+Die Dekomprimierung ist meist einfacher als die Komprimierung, weil die Daten nicht analysiert werden muss. Schreiben Sie nun ein Programm welches den Komprimierungsvorgang rückgängig macht.
+
+---
+
+## Tipps
+
+Es gibt verschiedene herangehensweisen, es ist möglich 
+
+<details><summary><b>Tipp 0: Array gefüllt mit einem Wert erstellen</b></summary>
+	
+Der Konstruktor von `Array` übernimmt 2 Parameter, die Größe des Arrays und den Inhalt, mit dem das Array gefüllt werden soll.
+
+`Array(3, 42)` entspricht `[42, 42, 42]`
+	
+</details>
+
+<details><summary><b>Tipp 1: Arrays zusammenfügen</b></summary>
+	
+Die Funktion `Array.concat` übernimmt zwei Arrays und gibt ein neues Array zurück, bei dem die beiden Arrays zusammengefügt sind. Diese ähnelt dem Zusammenfügen von zwei Strings mit `+`.
+	
+</details>
 
 ---
 
