@@ -35,7 +35,9 @@ wird zu `[[4, "A"], [7, null], [2, true], [1, false], [1, true]]`
 3. `compress([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])`
 wird zu `[[16, 0], [1, 1], [16, 0]]`
 
-4. `compress(Array(42, 123))` wird zu `[[42, 123]]` (wobei `Array(42, 123)` ein Array der Länge 42 ist, welches mit dem Wert 123 gefüllt ist.
+4. `compress([[], [], [], [], {}, {}])` wird zu `[[4, []], [2, {}]]`
+
+5. `compress(Array(42, 123))` wird zu `[[42, 123]]` (wobei `Array(42, 123)` ein Array der Länge 42 ist, welches mit dem Wert 123 gefüllt ist.
 
 ---
 
