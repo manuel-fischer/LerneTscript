@@ -10,9 +10,12 @@ Folgender Code kann genutzt werden, um den [Goldenen Schnitt](https://de.wikiped
 	
 Ändern Sie den Initialisierer von `phi` zu anderen Zahlen.
 Sie werden merken, dass es bei einigen negativen Werten auch funktioniert.
-Allerdings funktioniert es nicht bei Zahlen wie `0`, `-1`, `-0.5`, usw..., weil eine Division mit 0 eintritt.
+Allerdings funktioniert es nicht bei Zahlen wie `0`, `-1`, weil eine Division mit 0 eintritt.
+Jedoch funktioniert es wenn stattessen die Fließkommazahldarstellung verwendet wird: `0.0` oder `-1.0`.
+Das Ergebnis der Division ist `Infinity`, bzw. `-Infinity`. 
 
-Probieren Sie aus, finden Sie weitere Zahlen, bei denen nach einiger Zeit Division mit 0 auftritt.
+Probieren Sie aus, finden Sie weitere Zahlen, bei denen nach einiger Zeit Division mit 0, also `±Infinity` (oder sehr große Zahl), auftritt:
+`-0.5 == -1/2, -2/3, -3/5`
 
 Probieren Sie auch aus den Bereich von `0:20` auf zB. `0:50` zu vergößern. Sie werden erkennen, dass sich die Zahl nach einiger Zahl stabilisiert. 
 
