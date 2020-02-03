@@ -98,6 +98,7 @@ Schreiben Sie das erste Element in eine Variable. Vergleichen Sie nun die folgen
 	function compress(array)
 	{
 		if array.size() == 0 then return [];
+		
 		var ret = [];
 		var element = array[0];
 		var count = 0;
