@@ -14,7 +14,7 @@ Allerdings tritt bei einigen Zahlen wie `0`, `-1` zwischendurch `Infinity`, bzw.
 
 Probieren Sie aus, finden Sie weitere Zahlen, bei denen nach einiger Zeit Division mit 0, also `±Infinity` (oder sehr große Zahl), auftritt:
 
-`-0.5 == -1/2, -2/3, -3/5, -5/8, -8/13...`
+`-1/1, -1/2, -2/3, -3/5, -5/8, -8/13...`
 
 Erkennen Sie die Regel?
 
