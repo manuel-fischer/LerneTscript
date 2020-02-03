@@ -10,7 +10,7 @@ Folgender Code kann genutzt werden, um den [Goldenen Schnitt](https://de.wikiped
 	
 Ändern Sie den Initialisierer von `phi` zu anderen Zahlen.
 Sie werden merken, dass es bei einigen negativen Werten auch funktioniert.
-Allerdings funktioniert es nicht bei Zahlen wie `0`, `-1`, `-0.5`, usw. nicht, weil eine Division mit 0 eintritt.
+Allerdings funktioniert es nicht bei Zahlen wie `0`, `-1`, `-0.5`, usw..., weil eine Division mit 0 eintritt.
 
 Probieren Sie aus, finden Sie weitere Zahlen, bei denen nach einiger Zeit Division mit 0 auftritt.
 
