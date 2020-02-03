@@ -8,17 +8,34 @@ Zu einem Kompressionsalgorithmus gehören jeweils die Komprimierung und die Deko
 
 Schreiben Sie eine Funktion, welches ein Array einliest und ein Array *ausspuckt*, welches aus einzelnen Anzahl-Inhalt-Paaren (Array mit zwei Elementen) besteht.
 
-    function compress(array)
+	function compress(array)
 
 Der folgende Funktionsausruf
 
-    compress([0, 1, 1, 1, 2, 2, 2, 2, 3, 3])
+	compress([0, 1, 1, 1, 2, 2, 2, 2, 3, 3])
   
 soll also folgendes zurückgeben
 
-    [[1, 0], [3, 1], [4, 2], [2, 3]]
+	[[1, 0], [3, 1], [4, 2], [2, 3]]
 
 Die Funktion soll über die einzelnen Elemente laufen und zählen, wie oft ein Element nacheinander auftritt. Oben im Beispiel wird die `0` nur einmal gezählt, also wird dafür `[1, 0]` zum großen Array hinzugefügt. Die `1` wird dreimal gezählt, somit wird `[3, 1]` hinzugefügt. Usw.
+
+
+Weitere Beispiele
+
+0. `compress([3.14, 3.14, 3.14, 3.14, 3.14])`
+wird zu `[[5, 3.14]]`
+
+1. `compress([2, 2, 2.17, 2.17, 2, 2.17])`
+wird zu `[[2, 2], [2, 2.17], [1, 2], [1, 2.17]]`
+
+2. `compress(["A", "A", "A", "A", null, null, null, null, null, null, null, true, true, false, true])`
+wird zu `[[4, "A"], [7, null], [2, true], [1, false], [1, true]]`
+
+3. `compress([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])`
+wird zu `[[16, 0], [1, 1], [16, 0]]`
+
+4. `compress(Array(42, 123))` wird zu `[[42, 123]]` (wobei `Array(42, 123)` ein Array der Länge 42 ist, welches mit dem Wert 123 gefüllt ist.
 
 ---
 
@@ -107,7 +124,11 @@ Schreiben Sie das erste Element in eine Variable. Vergleichen Sie nun die folgen
 
 # 2. Dekomprimierung
 
-Die Dekomprimierung ist meist einfacher als die Komprimierung, weil die Daten nicht analysiert werden muss. Schreiben Sie nun ein Programm welches den Komprimierungsvorgang rückgängig macht.
+Die Dekomprimierung ist meist einfacher als die Komprimierung, weil die Daten nicht analysiert werden muss. Schreiben Sie nun eine Funktion welche den Komprimierungsvorgang rückgängig macht.
+
+	function decompress(array);
+
+Prüfen Sie Ihre Funktion mit den obigen Ausgaben der Funktion `compress`, die Sie oben programmiert haben. Es sollte als Ergebnis dasselbe zurückgebeben werden, was der Funktion `compress` als Parameter übergeben worden ist.
 
 ---
 
