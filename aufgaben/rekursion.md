@@ -1,9 +1,9 @@
 # Rekursion
 Ein [Sierpinski-Dreieck](https://de.wikipedia.org/wiki/Sierpinski-Dreieck) ist ein Fraktal, welches mit unterschiedlicher Tiefe gezeichnet werden kann.
-Folgende Animation Zeigt wie sich das Fraktal ändert, wenn die Tiefe erhöht wird
+Folgende Animation zeigt wie sich das Fraktal ändert, wenn die Tiefe erhöht wird:
 
 <p align="center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/27/SierpinskiTriangle-ani-0-7.gif" width="222" height="200" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/27/SierpinskiTriangle-ani-0-7.gif" width="222" height="200"></img>
 </p>
 <p align="center">
 Sierpinski-Dreieck Animation
@@ -109,7 +109,7 @@ Die beiden anderen Eckpunkte sind die Mittelpunkte der Strecken zwischen diesem 
 
 <details><summary><i>Hinweis</i></summary>
 
-Berechnen Sie jeweils den Mittelwert der beiden `x` Koordinaten und Den der beiden `y` Koordinaten.
+Berechnen Sie jeweils den Mittelwert der beiden `x` Koordinaten und den Mittelwert der beiden `y` Koordinaten.
 
 </details>
 <details><summary><i>Lösung</i></summary>
@@ -121,7 +121,7 @@ Mögliche Lösungen sind
 
 </details>
 
-Schreiben Sie diese Koordinaten in Variablen, denn Sie werden diese mehrmals gebrauchen.
+Schreiben Sie die Koordinaten der Mittelpunkte in Variablen, denn Sie werden diese mehrmals gebrauchen.
 Sie werden jeden dieser Werte zwei mal nutzen, denn ein Dreieck berührt ein anderes Dreieck in diesem Punkt.
 
 </details>
