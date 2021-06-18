@@ -2,11 +2,11 @@
 
 In dieser Aufgabe wird ein Konzept vorgestellt, welches nützlich ist um die Speicherung von Daten zu optimieren:
 [Lauflängenkodierung](https://de.wikipedia.org/wiki/Laufl%C3%A4ngenkodierung) ist eine der einfachsten verlustfreien [Kompressionsalgorithmen](https://de.wikipedia.org/wiki/Datenkompression).
-Zu einem Kompressionsalgorithmus gehören jeweils die Komprimierung und die Dekomprimierung, welche die Komprimierung rückgängig macht.
+Zu jedem Kompressionsalgorithmus gehören die Komprimierung und die Dekomprimierung. Letzteres erzeugt aus den komprimierten Daten wieder die Originaldaten.
 
 # 1. Komprimierung
 
-Schreiben Sie eine Funktion, welches ein Array einliest und ein Array *ausspuckt*, welches aus einzelnen Anzahl-Inhalt-Paaren (Array mit zwei Elementen) besteht.
+Schreiben Sie eine Funktion, welches ein Array als Parameter akzeptiert. Die Funktion soll ein Array zurückgeben, welches aus einzelnen Anzahl-Inhalt-Paaren (Array mit zwei Elementen) besteht.
 
 	function compress(array)
 
@@ -17,6 +17,10 @@ Der folgende Funktionsausruf
 soll also folgendes zurückgeben
 
 	[[1, 0], [3, 1], [4, 2], [2, 3]]
+	
+Dies entspricht in etwa folgender Darstellung
+
+	1 mal 0, 3 mal 1, 4 mal 2, 2 mal 3
 
 Die Funktion soll über die einzelnen Elemente laufen und zählen, wie oft ein Element nacheinander auftritt. Oben im Beispiel wird die `0` nur einmal gezählt, also wird dafür `[1, 0]` zum großen Array hinzugefügt. Die `1` wird dreimal gezählt, somit wird `[3, 1]` hinzugefügt. Usw.
 
@@ -37,14 +41,14 @@ wird zu `[[16, 0], [1, 1], [16, 0]]`
 
 4. `compress([[], [], [], [], {}, {}])` wird zu `[[4, []], [2, {}]]`
 
-5. `compress(Array(42, 123))` wird zu `[[42, 123]]` (wobei `Array(42, 123)` ein Array der Länge 42 ist, welches mit dem Wert 123 gefüllt ist.
+5. `compress(Array(42, 123))` wird zu `[[42, 123]]` (wobei `Array(42, 123)` ein Array der Länge 42 ist, welches mit dem Wert 123 gefüllt ist).
 
 ---
 
 ## Tipps
 <details><summary><b>Tipp 0: Zählen der Elemente</b></summary>
 	
-Überlegen Sie wie man hintereinander liegende gleiche Elemente zählt.
+Überlegen Sie wie man gleiche, hintereinander liegende Elemente zählt.
 
 <details><summary><i>Hinweis</i></summary>
 	
@@ -54,7 +58,7 @@ Die Funktion übernimmt zwei Parameter: Das Array und die Position, ab der die w
 </details>
 <details><summary><i>Lösung</i></summary>
 
-Schreiben Sie das erste Element in eine Variable. Vergleichen Sie nun die folgenden Elemente im Array mit diesem, bis ein anderes Element auftritt oder das Ende des Arrays erreicht worden ist. Dabei zählen Sie mit. Diese Zahl nutzen Sie später im Anzahl-Inhalt-Paar.
+Merken Sie sich das erste Element in einer Variable. Vergleichen Sie nun die folgenden Elemente im Array mit dem gemerkten Element, bis ein anderes Element auftritt oder das Ende des Arrays erreicht worden ist. Dabei zählen Sie mit. Diese Zahl nutzen Sie später im Anzahl-Inhalt-Paar.
 
 </details>	
 </details>
@@ -127,9 +131,9 @@ Schreiben Sie das erste Element in eine Variable. Vergleichen Sie nun die folgen
 
 # 2. Dekomprimierung
 
-Die Dekomprimierung ist meist einfacher als die Komprimierung, weil die Daten nicht analysiert werden muss. Schreiben Sie nun eine Funktion welche den Komprimierungsvorgang rückgängig macht.
+Die Dekomprimierung ist meist einfacher als die Komprimierung, weil die Daten nicht analysiert werden müssen. Schreiben Sie nun eine Funktion welche den Komprimierungsvorgang rückgängig macht.
 
-	function decompress(array);
+	function decompress(compressed_array);
 
 Prüfen Sie Ihre Funktion mit den obigen Ausgaben der Funktion `compress`, die Sie oben programmiert haben. Es sollte als Ergebnis dasselbe zurückgebeben werden, was der Funktion `compress` als Parameter übergeben worden ist.
 
